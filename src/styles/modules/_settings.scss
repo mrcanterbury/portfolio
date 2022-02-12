@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(../fonts/Poppins/Poppins-Thin.ttf) format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(../fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(../fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: local('Caveat'), url(../fonts/Caveat/Caveat-Regular.ttf) format('truetype');
+}
+
+//Fonts
+$sans-serif: 'Poppins', sans-serif;
+$hand: 'Caveat', sans-serif;
+
+//Font Sizes
+$small: 10px;
+$medium: 14px;
+$regular: 18px;
+$large: 24px;
+$xl: 32px;
+$xxl: 48px;
+
+//Colors
+$primary: #ffffff;
+$secondary: #EBFF00;
+$black: #111111;
+$background-dark:#0D1A21;
+$background-light:#EAEAEA;
+$gray-light:#999999;
+$gray-med:#666666;
+$gray-dark:#333333;
