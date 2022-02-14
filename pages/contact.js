@@ -12,12 +12,10 @@ export default function Contact() {
       </Head>
 
       <main className={styles.main}>
-        <article>
-          <h1 className={styles.title}>Contact Page</h1>
-          <p className={styles.description}>
+          <h1>Contact Page</h1>
+          <p>
             This is the contact page.
           </p>
-        </article>
         </main>
 
     </div>

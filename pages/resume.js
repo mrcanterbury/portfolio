@@ -12,12 +12,10 @@ export default function Resume() {
       </Head>
 
       <main className={styles.main}>
-        <article>
-          <h1 className={styles.title}>Resume Page</h1>
-          <p className={styles.description}>
+          <h1>Resume Page</h1>
+          <p>
             This is the resume page.
           </p>
-        </article>
         </main>
 
     </div>

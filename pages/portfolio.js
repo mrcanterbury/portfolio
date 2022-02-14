@@ -12,12 +12,10 @@ export default function Portfolio() {
       </Head>
 
       <main className={styles.main}>
-        <article>
-          <h1 className={styles.title}>Portfolio Page</h1>
-          <p className={styles.description}>
+          <h1>Portfolio Page</h1>
+          <p>
             This is the portfolio page.
           </p>
-        </article>
         </main>
 
     </div>
