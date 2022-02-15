@@ -32,21 +32,23 @@
 
 .image {
     transform: rotate(15deg);
-    max-width: 310px;
-    max-height: 365px;
+    max-width: 321px;
+    max-height: 380px;
     box-shadow: 5px 5px 10px rgba(27, 27, 27, 0.15);
     -webkit-box-shadow: 5px 5px 10px rgba(27, 27, 27, .15);
     -moz-box-shadow: 5px 5px 10px rgba(27, 27, 27, .15);
 }
 
-@media (max-width: 810px) {
+@media (max-width: 800px) {
     .grid {
         grid-template-columns: 1fr;
         width: 100%;
+        padding: 1rem 0;
     }
 
     .text {
         text-align: center;
+        padding: .5rem;
     }
 
     .imageContainer {
