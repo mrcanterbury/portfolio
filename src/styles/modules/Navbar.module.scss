@@ -92,6 +92,7 @@ a.navlink {
         background-color: darken(settings.$background-dark, 5%);
         width: 1%;
         transition: .5s;
+        z-index: 3;
         padding: 1rem;
     }
 

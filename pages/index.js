@@ -1,24 +1,22 @@
 import Head from 'next/head'
-import styles from '../src/styles/modules/Home.module.scss'
+import home from '../src/styles/modules/Home.module.scss'
 import { gql, GraphQLClient } from 'graphql-request'
 import HomeModule from '../components/HomeModule'
 
 export default function Home(homeContent) {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Matt Canterbury</title>
         <meta name="description" content="Matt Canterbury's portfolio website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <div>
+        <main className={home.container}>
           {homeContent.homePage.homeRecord.map(module => <HomeModule details={module} key={module.id} />)}
-        </div>
-      </main>
+        </main>
 
-    </div>
+    </>
   )
 }
 
@@ -46,8 +44,11 @@ const query = gql`
           textThree
           image {
             id
+            url
             width
             height
+            alt
+            title
           }
         }
         ... on SkillSetRecord {
