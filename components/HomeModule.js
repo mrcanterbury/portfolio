@@ -5,7 +5,6 @@ import SkillSetRecord from './SkillSetRecord'
 import ContactMeRecord from './ContactMeRecord'
 
 export default function HomeModule({details}) {
-    console.log(details)
     if(details.__typename === "ShowCaseRecord") {
         return <ShowCaseRecord details={details} />;
     } else if(details.__typename === "AboutMeRecord") {

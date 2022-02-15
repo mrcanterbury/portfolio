@@ -4,7 +4,6 @@ import { gql, GraphQLClient } from 'graphql-request'
 import HomeModule from '../components/HomeModule'
 
 export default function Home(homeContent) {
-  console.log(homeContent.homePage.homeRecord)
   return (
     <div className={styles.container}>
       <Head>
@@ -42,7 +41,9 @@ const query = gql`
           id
           __typename
           title
-          content
+          textOne
+          textTwo
+          textThree
           image {
             id
             width

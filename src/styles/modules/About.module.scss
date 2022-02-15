@@ -1,0 +1,15 @@
+@use 'settings';
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem 3rem;
+}
+
