@@ -1,0 +1,61 @@
+@use 'settings';
+
+.grid_container {
+    padding: 3rem 1rem;
+    background-color: settings.$black;
+    color: settings.$secondary;
+}
+
+.grid_title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.grid {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 3rem 1rem;
+    width: 100%;
+}
+
+.grid_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item_title {
+    margin-top: .5rem;
+    font-weight: 400;
+}
+
+// Desktop 2560x1440
+@media  (min-width: 2000px) {
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        width: 60%; // Need
+    }
+}
+
+// Desktop 1920x1080
+@media (min-width: 1920px) and (max-width: 1999px) {
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        width: 80%; // Need
+    }
+}
+
+// Tablet
+@media (min-width: 800px) and (max-width: 1919px) {
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        width: 80%; // Need
+    }
+}

@@ -54,12 +54,15 @@ const query = gql`
         ... on SkillSetRecord {
           id
           __typename
+          title
           skillGrid {
             id
             description
             image {
               id
               url
+              width
+              height
             }
           }
         }
