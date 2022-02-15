@@ -24,7 +24,7 @@ export default function AboutMeRecord({details}) {
             </div>
           </article>
         </div>
-        <div className={about.imageContainer}>
+        <div className={about.image_container}>
           <div className={about.image}>
             <Image src={details.image.url} width={details.image.width} height={details.image.height} alt={details.image.alt} title={details.image.title} priority />
           </div>
