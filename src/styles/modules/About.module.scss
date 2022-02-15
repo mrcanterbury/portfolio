@@ -31,6 +31,7 @@
 }
 
 .image {
+    transform: rotate(15deg);
     max-width: 310px;
     max-height: 365px;
     box-shadow: 5px 5px 10px rgba(27, 27, 27, 0.15);
@@ -50,5 +51,9 @@
 
     .imageContainer {
         padding: 1rem;
+    }
+
+    .image {
+        transform: rotate(0);
     }
 }
