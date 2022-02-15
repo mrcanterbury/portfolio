@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import styles from '../src/styles/modules/Home.module.scss'
+import { gql, GraphQLClient } from 'graphql-request'
+import HomeModule from '../components/HomeModule'
 
-export default function Home() {
+export default function Home(homeContent) {
+  console.log(homeContent.homePage.homeRecord)
   return (
     <div className={styles.container}>
       <Head>
@@ -11,12 +14,74 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Under Construction</h1>
-        <p>
-          My portfolio project is being developed at this time.
-        </p>
+        <div>
+          {homeContent.homePage.homeRecord.map(module => <HomeModule details={module} key={module.id} />)}
+        </div>
       </main>
 
     </div>
   )
+}
+
+const query = gql`
+  query {
+    homePage {
+      id
+      homeRecord {
+        ... on ShowCaseRecord{
+          id
+          __typename
+          showCaseGallery {
+            id
+            url
+            width
+            height
+          }
+        }
+        ... on AboutMeRecord {
+          id
+          __typename
+          title
+          content
+          image {
+            id
+            width
+            height
+          }
+        }
+        ... on SkillSetRecord {
+          id
+          __typename
+          skillGrid {
+            id
+            description
+            image {
+              id
+              url
+            }
+          }
+        }
+        ... on ContactMeRecord {
+          id
+          __typename
+          title
+          subtitle
+        }
+      } 
+    }
+  }
+`
+export async function getStaticProps () {
+  const endpoint = "https://graphql.datocms.com/";
+  const graphQLClient = new GraphQLClient(endpoint, {
+    headers: {
+      "content-type": "application/json",
+      authorization: "Bearer " + process.env.DATOCMS_API_KEY,
+    }
+});
+  
+const homeContent = await graphQLClient.request(query);
+  return {
+    props: homeContent
+  }
 }
