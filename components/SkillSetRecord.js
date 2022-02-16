@@ -2,7 +2,6 @@ import Image from 'next/image'
 import skillset from '../src/styles/modules/Skillset.module.scss'
 
 export default function SkillSetRecord({details}) {
-  console.log(details)
   return (
     <>
       <div className={skillset.grid_container}>

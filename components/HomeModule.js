@@ -11,8 +11,6 @@ export default function HomeModule({details}) {
         return <AboutMeRecord details={details} />;
     } else if(details.__typename === "SkillSetRecord") {
         return <SkillSetRecord details={details} />;
-    } else if(details.__typename === "ContactMeRecord") {
-        return <ContactMeRecord details={details} />
     }
   return (
     <div>

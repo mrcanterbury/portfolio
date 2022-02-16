@@ -1,0 +1,7 @@
+@use 'settings';
+
+.contact_title_container {
+    padding: 3rem 1rem;
+    background-color: settings.$black;
+    color: settings.$secondary;
+}

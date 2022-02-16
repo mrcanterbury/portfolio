@@ -1,9 +1,13 @@
-import React from 'react'
+import contact from '../src/styles/modules/Contact.module.scss'
 
-export default function ContactMeRecord() {
+export default function ContactMeRecord({details}) {
+  console.log(details)
   return (
-    <div>
-        <h1>Contact Me</h1>
-    </div>
+    <>
+      <div className={contact.title_container}>
+        <h1>{details.title}</h1>
+        <p>{details.subtitle}</p>
+      </div>
+    </>
   )
 }

@@ -66,12 +66,6 @@ const query = gql`
             }
           }
         }
-        ... on ContactMeRecord {
-          id
-          __typename
-          title
-          subtitle
-        }
       } 
     }
   }
