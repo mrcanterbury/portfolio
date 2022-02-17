@@ -2,7 +2,6 @@ import React from 'react'
 import ShowCaseRecord from './ShowCaseRecord'
 import AboutMeRecord from './AboutMeRecord'
 import SkillSetRecord from './SkillSetRecord'
-import ContactMeRecord from './ContactMeRecord'
 
 export default function HomeModule({details}) {
     if(details.__typename === "ShowCaseRecord") {
