@@ -5,7 +5,7 @@ import showcase from '../src/styles/modules/Showcase.module.scss'
 
 export default function ShowCaseRecord({details}) {
 
-  const dcmsLoader = ({ src, width, quality }) => {
+  const imgLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
   }
 
@@ -17,7 +17,14 @@ export default function ShowCaseRecord({details}) {
     <>
       <div className={showcase.gallery_container}>
         <button className={showcase.showcase_button} onClick={scrollPrev}>
-          <img src='/arrow_prev.svg' alt="Prev" title="Prev"/>
+          <Image
+            loader={imgLoader}
+            src='/arrow_prev.svg'
+            alt="Prev"
+            title="Prev"
+            width={40}
+            height={40}
+          />
         </button>
         <div className={showcase.gallery}>
           <div className={showcase.embla} ref={emblaRef}>
@@ -25,7 +32,7 @@ export default function ShowCaseRecord({details}) {
               {details.showCaseGallery.map(card => (
                 <div className={showcase.embla__slide} key={card.id}>
                   <Image
-                    loader={dcmsLoader}
+                    loader={imgLoader}
                     src={card.url}
                     alt={card.alt}
                     width={card.width} 
@@ -37,7 +44,14 @@ export default function ShowCaseRecord({details}) {
           </div>
         </div>
         <button className={showcase.showcase_button} onClick={scrollNext}>
-          <img src='/arrow_next.svg' alt="Next" title="Next"/>
+        <Image
+          loader={imgLoader}
+          src='/arrow_next.svg'
+          alt="Next"
+          title="Next"
+          width={40}
+          height={40}
+          />
         </button>
       </div>
     </>
