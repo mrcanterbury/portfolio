@@ -33,6 +33,7 @@ const query = gql`
             url
             width
             height
+            alt
           }
         }
         ... on AboutMeRecord {
