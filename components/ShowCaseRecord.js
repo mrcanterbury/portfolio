@@ -2,8 +2,8 @@ import React, { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import showcase from '../src/styles/modules/Showcase.module.scss'
-import arrowPrev from '../src/img/arrow_prev.svg'
-import arrowNext from '../src/img/arrow_next.svg'
+import arrowPrev from '../public/arrow_prev.svg'
+import arrowNext from '../public/arrow_next.svg'
 
 export default function ShowCaseRecord({details}) {
 
