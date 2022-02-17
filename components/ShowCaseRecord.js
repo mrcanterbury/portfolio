@@ -44,15 +44,15 @@ export default function ShowCaseRecord({details}) {
           </div>
         </div>
         <button className={showcase.showcase_button} onClick={scrollNext}>
-        <Image
-          loader={imgLoader}
-          src='/arrow_next.svg'
-          alt="Next"
-          title="Next"
-          width={40}
-          height={40}
+          <Image
+            loader={imgLoader}
+            src='/arrow_next.svg'
+            alt="Next"
+            title="Next"
+            width={40}
+            height={40}
           />
-        </button>
+          </button>
       </div>
     </>
   )

@@ -2,6 +2,11 @@ import Image from 'next/image'
 import skillset from '../src/styles/modules/Skillset.module.scss'
 
 export default function SkillSetRecord({details}) {
+
+  const imgLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+  }
+
   return (
     <>
       <div className={skillset.grid_container}>
@@ -14,12 +19,14 @@ export default function SkillSetRecord({details}) {
           key={item.id} 
           className={skillset.grid_item}
           >
-            <div>
-              <Image src={item.image.url} width={item.image.width} height={item.image.height} alt="Skill Icon"/>
-            </div>
-            <div>
-              <h5 className={skillset.item_title}>{item.description.toUpperCase()}</h5>
-            </div>
+            <Image 
+              loader={imgLoader}
+              src={item.image.url} 
+              width={item.image.width} 
+              height={item.image.height} 
+              alt={item.image.alt}
+            />
+            <h5 className={skillset.item_title}>{item.description.toUpperCase()}</h5>
           </div>)}
         </div>
       </div>

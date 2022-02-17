@@ -8,14 +8,12 @@ export default function Home(homeContent) {
     <>
       <Head>
         <title>Matt Canterbury</title>
-        <meta name="description" content="Matt Canterbury's portfolio website" />
+        <meta name="description" content="Matt Canterbury's personal website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
         <main className={home.container}>
           {homeContent.homePage.homeRecord.map(module => <HomeModule details={module} key={module.id} />)}
         </main>
-
     </>
   )
 }
@@ -64,6 +62,7 @@ const query = gql`
               url
               width
               height
+              alt
             }
           }
         }
