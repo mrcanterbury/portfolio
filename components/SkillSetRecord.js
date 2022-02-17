@@ -15,7 +15,7 @@ export default function SkillSetRecord({details}) {
           className={skillset.grid_item}
           >
             <div>
-              <Image src={item.image.url} width={item.image.width} height={item.image.height}/>
+              <Image src={item.image.url} width={item.image.width} height={item.image.height} alt="Skill Icon"/>
             </div>
             <div>
               <h5 className={skillset.item_title}>{item.description.toUpperCase()}</h5>

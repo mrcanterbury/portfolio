@@ -21,7 +21,7 @@ export default function ShowCaseRecord({details}) {
           <div className={showcase.embla} ref={emblaRef}>
             <div className={showcase.embla__container}>
               {details.showCaseGallery.map(card => <div className={showcase.embla__slide} key={card.id}>
-                <Image src={card.url} width={card.width} height={card.height} priority />
+                <Image src={card.url} width={card.width} height={card.height} alt="Showcase Card" priority />
               </div>)}
             </div>
           </div>
