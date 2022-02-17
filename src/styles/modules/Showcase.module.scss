@@ -39,9 +39,11 @@
     background: none;
     border-style: none;
     cursor: pointer;
+    
 
     img {
         opacity: 25%;
+        transition: .3s;
     }
 
     img:hover {
