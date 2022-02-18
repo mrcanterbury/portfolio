@@ -70,7 +70,7 @@ const query = gql`
     }
   }
 `
-export async function getStaticProps () {
+export async function getServerSideProps () {
   const endpoint = "https://graphql.datocms.com/";
   const graphQLClient = new GraphQLClient(endpoint, {
     headers: {
