@@ -1,5 +1,7 @@
-# Personal Portfolio
+# Personal Website
 
-## Next.js | Sass | DatoCMS
+My personal portfolio created using
 
-### Deployed on Linode (Ubuntu 20.04 LTS)
+### Next.js | Sass | DatoCMS | GraphQL
+
+## Deployed on Linode (Ubuntu 20.04 LTS)
