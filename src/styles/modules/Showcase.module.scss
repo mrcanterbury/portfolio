@@ -1,4 +1,4 @@
-@use 'settings';
+@use '../settings';
 
 .gallery_container {
     margin-top: 5rem;
@@ -52,7 +52,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
     .gallery_container {
         margin-top: 1rem;
