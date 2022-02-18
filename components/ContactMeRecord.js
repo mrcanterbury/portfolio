@@ -1,6 +1,6 @@
 import contact from '../src/styles/modules/Contact.module.scss'
 
-export default function ContactMeRecord({details}) {
+export default function ContactMeRecord({ details }) {
   console.log(details)
   return (
     <>

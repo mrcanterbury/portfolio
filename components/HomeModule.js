@@ -3,7 +3,7 @@ import ShowCaseRecord from './ShowCaseRecord'
 import AboutMeRecord from './AboutMeRecord'
 import SkillSetRecord from './SkillSetRecord'
 
-export default function HomeModule({details}) {
+export default function HomeModule({ details }) {
     if(details.__typename === "ShowCaseRecord") {
         return <ShowCaseRecord details={details} />;
     } else if(details.__typename === "AboutMeRecord") {

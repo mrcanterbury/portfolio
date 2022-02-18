@@ -3,7 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import showcase from '../src/styles/modules/Showcase.module.scss'
 
-export default function ShowCaseRecord({details}) {
+export default function ShowCaseRecord({ details }) {
 
   const imgLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`

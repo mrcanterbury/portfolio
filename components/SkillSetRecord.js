@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import skillset from '../src/styles/modules/Skillset.module.scss'
 
-export default function SkillSetRecord({details}) {
+export default function SkillSetRecord({ details }) {
 
   const imgLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
