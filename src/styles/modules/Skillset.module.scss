@@ -28,6 +28,10 @@
     align-items: center;
 }
 
+.grid .grid_item:last-child {
+    display: none;
+}
+
 .item_title {
     margin-top: .5rem;
     font-weight: 400;
@@ -40,6 +44,10 @@
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         width: 60%; // Need
     }
+
+    .grid .grid_item:last-child {
+        display: flex;
+    }
 }
 
 // Desktop 1920x1080
@@ -49,6 +57,10 @@
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         width: 80%; // Need
     }
+
+    .grid .grid_item:last-child {
+        display: flex;
+    }
 }
 
 // Tablet
@@ -57,5 +69,9 @@
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         width: 80%; // Need
+    }
+
+    .grid .grid_item:last-child {
+        display: flex;
     }
 }
