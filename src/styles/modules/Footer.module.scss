@@ -2,10 +2,45 @@
 
 .main {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 3rem;
+    gap: 1rem;
     background-color: settings.$gray-dark;
-    height: 200px;
+    padding: 1rem;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 1rem;
+}
+
+.link {
+    opacity: 50%;
+    transition: .3s;
+}
+
+.link:hover {
+    opacity: 100%;
+}
+
+.top_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.copy {
+    color: settings.$primary;
+    font-size: settings.$medium;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 400px) {
+    .links {
+        gap: 1.5rem;
+    }
 }
