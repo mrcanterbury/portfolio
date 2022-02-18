@@ -37,12 +37,12 @@
     font-weight: 400;
 }
 
-// Desktop 2560x1440
+
 @media  (min-width: 2000px) {
 
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        width: 60%; // Need
+        width: 60%;
     }
 
     .grid .grid_item:last-child {
@@ -50,12 +50,12 @@
     }
 }
 
-// Desktop 1920x1080
+
 @media (min-width: 1920px) and (max-width: 1999px) {
 
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        width: 80%; // Need
+        width: 80%;
     }
 
     .grid .grid_item:last-child {
@@ -63,12 +63,12 @@
     }
 }
 
-// Tablet
+
 @media (min-width: 800px) and (max-width: 1919px) {
 
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        width: 80%; // Need
+        width: 80%;
     }
 
     .grid .grid_item:last-child {
