@@ -68,20 +68,19 @@ a.navlink {
     padding: 0;
   }
   
-  #mobile:hover,
-  #mobile:focus {
-      background:transparent;
-  }
+#mobile:hover,
+#mobile:focus {
+    background:transparent;
+}
   
-  #mobile:focus {
-      outline: none;
-  
-  }
+#mobile:focus {
+    outline: none;
+
+}
 
 @media (max-width: 920px) {
     
     .navmenu {
-        min-height: 100vh;
         position: fixed;
         top: 5rem;
         left: -100%;
@@ -91,15 +90,16 @@ a.navlink {
         align-items: flex-start;
         background-color: darken(settings.$background-dark, 5%);
         width: 1%;
+        min-height: 100vh;
         transition: .5s;
         z-index: 3;
         padding: 1rem;
     }
 
     .navmenu.active {
-       top: 5rem;
-       left: 0;
-       width: 100%;
+        top: 5rem;
+        left: 0;
+        width: 100%;
     }
 
     .navitem {
