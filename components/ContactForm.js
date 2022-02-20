@@ -28,8 +28,8 @@ export default function ContactForm() {
                     <label htmlFor="message">Message*</label>
                     <textarea name="" id="message"/>
                     <div className={form.btn_container}>
-                        <button>Clear Form</button>
-                        <button>Submit</button>
+                        <button className={form.form_clear}>Reset</button>
+                        <button className={form.form_submit}>Submit</button>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,17 @@
+@use './settings';
+
+@mixin btn_large($radius: 0) {
+    border-style: none;
+    font-family: settings.$sans-serif;
+    font-size: settings.$medium;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: .5rem 1rem;
+    transition: .3s;
+    cursor: pointer;
+  
+    @if $radius != 0 {
+      border-radius: $radius;
+    }
+}

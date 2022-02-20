@@ -12,13 +12,14 @@ export default function Contact() {
       </Head>
 
       <main className={contact.container}>
-          <h1>Contact Page</h1>
-          <p>
-            This is the contact page.
-          </p>
-          <ContactForm />
+          <div className={contact.fill}>
+            <h1>Contact Page</h1>
+            <p>
+              This is the contact page.
+            </p>
+            <ContactForm />
+          </div>
         </main>
-
     </>
   )
 }

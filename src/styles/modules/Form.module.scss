@@ -1,10 +1,14 @@
 @use '../settings';
+@use '../components' as *;
+
 
 .main {
+    margin: auto;
+    width: 60%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    padding: 2rem 5rem;
+    padding: 2rem;
 }
 
 .input_field {
@@ -32,4 +36,47 @@
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+}
+
+.form_clear {
+    @include btn_large($radius: 5px);
+    color: settings.$gray-dark;
+    background-color: settings.$gray-light;
+}
+
+.form_clear:hover {
+    background-color: lighten(settings.$gray-light, 10%);
+}
+
+.form_submit {
+    @include btn_large($radius: 5px);
+    color: settings.$gray-dark;
+    background-color: settings.$secondary;
+}
+
+.form_submit:hover {
+    background-color: darken(settings.$secondary, 10%);
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        width: 80%;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .main {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  
+    .main {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
 }
