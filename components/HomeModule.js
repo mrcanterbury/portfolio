@@ -1,4 +1,3 @@
-import React from 'react'
 import ShowCaseRecord from './ShowCaseRecord'
 import AboutMeRecord from './AboutMeRecord'
 import SkillSetRecord from './SkillSetRecord'

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import ContactForm from '../components/ContactForm'
 import styles from '../src/styles/modules/Home.module.scss'
 
 export default function Contact() {
@@ -16,6 +16,7 @@ export default function Contact() {
           <p>
             This is the contact page.
           </p>
+          <ContactForm />
         </main>
 
     </div>

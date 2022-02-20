@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import showcase from '../src/styles/modules/Showcase.module.scss'
