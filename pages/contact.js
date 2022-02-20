@@ -1,17 +1,17 @@
 import Head from 'next/head'
 import ContactForm from '../components/ContactForm'
-import styles from '../src/styles/modules/Home.module.scss'
+import contact from '../src/styles/modules/Page.module.scss'
 
 export default function Contact() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Matt Canterbury - Contact Me</title>
         <meta name="description" content="Matt Canterbury's portfolio website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={contact.container}>
           <h1>Contact Page</h1>
           <p>
             This is the contact page.
@@ -19,6 +19,6 @@ export default function Contact() {
           <ContactForm />
         </main>
 
-    </div>
+    </>
   )
 }

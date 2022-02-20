@@ -24,3 +24,28 @@ label {
   font-size: settings.$regular;
   font-weight: 200;
 }
+
+input {
+  font-size: settings.$regular;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: .5rem;
+}
+
+textarea {
+  min-height: 80%;
+  font-size: settings.$regular;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: .5rem;
+}
+
+button {
+  font-family: settings.$sans-serif;
+  font-size: settings.$medium;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+}

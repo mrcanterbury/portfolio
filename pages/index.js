@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import home from '../src/styles/modules/Home.module.scss'
+import home from '../src/styles/modules/Page.module.scss'
 import { gql, GraphQLClient } from 'graphql-request'
 import HomeModule from '../components/HomeModule'
 
