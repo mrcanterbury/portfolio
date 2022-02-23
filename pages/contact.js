@@ -28,7 +28,6 @@ const query = gql`
           __typename
           id
           title
-          subtitle
           contactList {
             id
             icon {

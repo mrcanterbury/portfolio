@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import contact from '../src/styles/modules/Contact.module.scss'
 
 export default function ContactRecord({ details }) {
 
@@ -8,18 +9,15 @@ export default function ContactRecord({ details }) {
 
   return (
     <>
-        <div>
+        <div className={contact.main}>
             <div>
-                <h1>{details.title}</h1>
-                <span>
-                    {details.subtitle}
-                </span>
+                <h1 className={contact.contact_title}>{details.title}</h1>
             </div>
-            <div>
+            <div className={contact.list_container}>
                 {details.contactList.map(item => 
                 <div 
                 key={item.id} 
-                // className={}
+                className={contact.list_item}
                 >
                 <Image 
                     loader={imgLoader}

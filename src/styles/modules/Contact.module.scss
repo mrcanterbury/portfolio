@@ -1,7 +1,60 @@
 @use '../settings';
 
-.contact_title_container {
-    padding: 3rem 1rem;
-    background-color: settings.$black;
+.main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 3rem 2rem;
+}
+
+.subtitle {
+    font-size: settings.$regular;
+    font-weight: 200;
     color: settings.$secondary;
+}
+
+.list_container {
+    padding: 1rem 0;
+}
+
+.list_item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 3rem 2rem;
+    }
+
+    .list_item {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .main {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem 2rem;
+    }
+
+    .list_item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
 }
