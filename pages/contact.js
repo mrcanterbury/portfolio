@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import ContactForm from '../components/ContactForm'
 import contact from '../src/styles/modules/Page.module.scss'
+import { gql, GraphQLClient } from 'graphql-request'
+import ContactModule from '../components/ContactModule'
 
-export default function Contact() {
+export default function Contact(contactContent) {
   return (
     <>
       <Head>
@@ -12,14 +13,55 @@ export default function Contact() {
       </Head>
 
       <main className={contact.container}>
-          <div className={contact.fill}>
-            <h1>Contact Page</h1>
-            <p>
-              This is the contact page.
-            </p>
-            <ContactForm />
-          </div>
-        </main>
+          {contactContent.contactPage.contactRecord.map(module => <ContactModule details={module} key={module.id} />)}
+      </main>
     </>
   )
+}
+
+const query = gql`
+  query {
+    contactPage {
+      id
+      contactRecord {
+        ... on ContactRecord {
+          __typename
+          id
+          title
+          subtitle
+          contactList {
+            id
+            icon {
+              id
+              url
+              width
+              height
+              alt
+            }
+            userHandle
+          }
+        }
+        ... on QuickMessageRecord {
+          __typename
+          id
+          title
+          subtitle
+        }
+      }
+    }
+  }
+`
+export async function getServerSideProps () {
+  const endpoint = "https://graphql.datocms.com/";
+  const graphQLClient = new GraphQLClient(endpoint, {
+    headers: {
+      "content-type": "application/json",
+      authorization: "Bearer " + process.env.DATOCMS_API_KEY,
+    }
+});
+  
+const contactContent = await graphQLClient.request(query);
+  return {
+    props: contactContent
+  }
 }

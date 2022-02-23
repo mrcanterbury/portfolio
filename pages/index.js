@@ -23,7 +23,7 @@ const query = gql`
     homePage {
       id
       homeRecord {
-        ... on ShowCaseRecord{
+        ... on ShowCaseRecord {
           id
           __typename
           showCaseGallery {
