@@ -23,7 +23,7 @@ export default function ContactForm() {
                         <input type="tel" id="phone" name="phone"
                         />
                     </div>
-                    <span>*Fields are required</span>
+                    <small>* Fields are required</small>
                 </div>
                 <div className={form.text_field}>
                     <label htmlFor="message">Message*</label>
