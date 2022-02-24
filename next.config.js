@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ['localhost','www.datocms-assets.com'],
+    domains: ['www.datocms-assets.com'],
   },
 }
